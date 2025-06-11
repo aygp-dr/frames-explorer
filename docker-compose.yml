@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  frames:
+    build: .
+    container_name: frame-workshop
+    volumes:
+      - ./data:/app/data
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: python3 examples.py
+    
+  frames-interactive:
+    build: .
+    container_name: frame-workshop-interactive
+    volumes:
+      - ./data:/app/data
+    stdin_open: true
+    tty: true
+    command: python3 -i frame_system.py

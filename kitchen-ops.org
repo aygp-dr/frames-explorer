@@ -1,0 +1,114 @@
+#+TITLE: Kitchen Operations - Repository Command Management
+#+PROPERTY: header-args :mkdirp yes :comments link
+#+PROPERTY: header-args:markdown :comments link :comment-start "<!--" :comment-end "-->"
+
+* Tangle Instructions
+  To tangle all commands:
+  - Interactive: ~C-c C-v t~ (org-babel-tangle)
+  - Batch:
+    
+#+begin_src shell
+emacs --batch -l org --eval "(org-babel-tangle-file \"kitchen-ops.org\")"
+#+end_src
+
+#+RESULTS:
+: No comment syntax is defined.  Use:
+
+  
+  To detangle (jump to source): ~C-c C-v j~ on tangled file
+
+* Daily Operations
+
+** Mise en Place - Daily Setup
+   #+begin_src markdown :tangle .claude/commands/mise-en-place.md
+     # Mise en Place - Everything in its Place
+
+     Morning prep checklist:
+     - [ ] Check git status across all repos
+     - [ ] Review calendar and tasks for the day
+     - [ ] Update dependencies if needed
+     - [ ] Ensure development environment is ready
+     - [ ] Check CI/CD status
+     - [ ] Review PRs awaiting action
+     - [ ] Clear notification backlog
+   #+end_src
+
+** Deglaze - Integrate Upstream
+   #+begin_src markdown :tangle .claude/commands/deglaze.md
+     # Deglaze - Integrate Upstream Changes
+
+     Pull and merge workflow:
+     - [ ] git pull origin main
+     - [ ] Fix any merge conflicts
+     - [ ] git add . && git commit -m "WIP: Deglaze merge"
+     - [ ] Check repo description and topics
+     - [ ] Ensure docs, scripts, and Makefile are aligned
+   #+end_src
+
+* Quick Checks
+
+** Blanch - Quick Validation
+   #+begin_src markdown :tangle .claude/commands/blanch.md
+     # Blanch - Quick Heat Test
+
+     - [ ] Run pytest with fast markers only
+     - [ ] Check linting: `make lint`
+     - [ ] Verify imports: `python -m py_compile *.py`
+     - [ ] Quick type check: `mypy --fast-module-finder`
+     - [ ] Smoke test main entry points
+   #+end_src
+
+** Reduce - Simplify and Refactor
+   #+begin_src markdown :tangle .claude/commands/reduce.md
+   # Reduce - Concentrate the Essence
+   
+   - [ ] Run code complexity analysis
+   - [ ] Identify duplicate/redundant code
+   - [ ] Extract common functions to utils
+   - [ ] Remove dead code and unused imports
+   - [ ] Update tests to match refactored code
+   - [ ] Regenerate documentation
+   #+end_src
+
+* Integration
+
+** Temper - Gradual Changes
+   #+begin_src markdown :tangle .claude/commands/temper.md
+   # Temper - Carefully Blend Changes
+   
+   - [ ] Create feature branch from main
+   - [ ] Cherry-pick specific commits
+   - [ ] Run integration tests incrementally
+   - [ ] Build and test each module separately
+   - [ ] Merge back in small, tested batches
+   - [ ] Update Mermaid diagrams for new flow
+   #+end_src
+
+* Release Prep
+
+** Proof - Pre-deployment Validation
+   #+begin_src markdown :tangle .claude/commands/proof.md
+   # Proof - Let it Rise Before Baking
+   
+   - [ ] Full test suite: `make test`
+   - [ ] Coverage report > 80%
+   - [ ] All CI/CD checks passing
+   - [ ] Documentation builds without warnings
+   - [ ] Mermaid diagrams render correctly
+   - [ ] Makefile targets all functional
+   - [ ] Dependencies locked and current
+   #+end_src
+
+** Plate - Final Presentation
+   #+begin_src markdown :tangle .claude/commands/plate.md
+   # Plate - Ready to Serve
+   
+   - [ ] Version bump in setup.py/pyproject.toml
+   - [ ] Update CHANGELOG.md
+   - [ ] Tag release: `git tag -a v{version}`
+   - [ ] Build distribution: `make dist`
+   - [ ] Generate release notes from commits
+   - [ ] Update README badges
+   - [ ] Deploy documentation
+   - [ ] Push tags: `git push --tags`
+   #+end_src
