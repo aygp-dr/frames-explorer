@@ -18,11 +18,14 @@ A modern Python implementation of frame-based knowledge representation inspired 
 git clone https://github.com/aygp-dr/frames-explorer.git
 cd frames-explorer
 
-# Tangle files from SETUP.org (if using Emacs)
-emacs --batch -l org --eval "(org-babel-tangle-file \"SETUP.org\")"
+# Set up development environment (optional)
+make init
 
-# Or just use the Python files directly
+# Run interactive examples
 python3 examples.py
+
+# Or run tests
+python3 test_frames.py
 ```
 
 ## Basic Usage

@@ -1,9 +1,15 @@
 # Frame System Makefile
 
-.PHONY: all test clean docker tangle
+.PHONY: all test clean docker tangle init
 
 # Default target
 all: test
+
+# Initialize development environment
+init:
+	uv venv
+	uv pip install pytest mypy ruff
+	@echo "Development environment initialized. Activate with: source .venv/bin/activate"
 
 # Tangle from org file (requires Emacs)
 tangle:
