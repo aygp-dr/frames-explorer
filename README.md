@@ -70,7 +70,7 @@ python3 test_frames.py
 Tested on:
 - Linux x86_64 (Debian)
 - Linux ARM64 (Raspberry Pi)
-- FreeBSD
+- FreeBSD 14.2-RELEASE (amd64)
 - Alpine Linux (Docker)
 
 ## License
