@@ -46,11 +46,11 @@ test-all-platforms:
 	docker run --rm -v $(PWD):/app alpine:latest sh -c "apk add python3 && cd /app && python3 test_frames.py"
 	@echo "\nAll platform tests completed!"
 
-# Image conversions
-images:
-	@echo "Converting images to web-optimized formats..."
-	for img in static/images/*.webp; do \
-		base=$${img%.webp}; \
-		convert $$img -resize 400x400 -depth 8 -colors 64 -background white -alpha remove -quality 50 $${base}_small.png; \
-		echo "Converted $$img to $${base}_small.png"; \
-	done
+# Image conversion pattern rule
+%_small.png: %.webp
+	@echo "Converting $< to $@..."
+	convert $< -resize 400x400 -depth 8 -colors 64 -background white -alpha remove -quality 50 $@
+
+# Convert all webp images
+images: $(patsubst %.webp,%_small.png,$(wildcard static/images/*.webp))
+	@echo "All images converted to optimized PNG format"
