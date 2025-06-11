@@ -1,6 +1,6 @@
 # Frame System Makefile
 
-.PHONY: all test clean docker tangle init
+.PHONY: all test clean docker tangle init images
 
 # Default target
 all: test
@@ -45,3 +45,12 @@ test-all-platforms:
 	@echo "\nTesting in Alpine container..."
 	docker run --rm -v $(PWD):/app alpine:latest sh -c "apk add python3 && cd /app && python3 test_frames.py"
 	@echo "\nAll platform tests completed!"
+
+# Image conversions
+images:
+	@echo "Converting images to web-optimized formats..."
+	for img in static/images/*.webp; do \
+		base=$${img%.webp}; \
+		convert $$img -resize 400x400 -depth 8 -colors 64 -background white -alpha remove -quality 50 $${base}_small.png; \
+		echo "Converted $$img to $${base}_small.png"; \
+	done

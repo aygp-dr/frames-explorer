@@ -4,6 +4,54 @@
 
 A modern Python implementation of frame-based knowledge representation inspired by MIT's FRL (Frame Representation Language) from the 1970s.
 
+## System Architecture
+
+### Component Diagram
+
+![Frame System Architecture](static/images/frames_architecture_small.png)
+
+### Class Structure
+
+```mermaid
+classDiagram
+    class Frame {
+        +string name
+        +Dict slots
+        +Dict _frames
+        +add_slot()
+        +get()
+        +put()
+        +remove_slot()
+        +describe()
+        +to_dict()
+    }
+    
+    class FRL_API {
+        +fassert()
+        +fget()
+        +fput()
+        +fdel()
+    }
+    
+    class Persistence {
+        +save_frames()
+        +load_frames()
+    }
+    
+    class Slot {
+        +value
+        +default
+        +if_needed
+        +if_added
+        +if_removed
+        +units
+    }
+    
+    Frame "1" -- "*" Slot : contains
+    FRL_API -- Frame : manipulates
+    Persistence -- Frame : serializes
+```
+
 ## Features
 
 - **Frames**: Knowledge structures with slots and facets
