@@ -6,11 +6,9 @@ A modern Python implementation of frame-based knowledge representation inspired 
 
 ## System Architecture
 
-### Component Diagram
-
 ![Frame System Architecture](static/images/frames_architecture_small.png)
 
-### Class Structure
+## Class Structure
 
 ```mermaid
 classDiagram
