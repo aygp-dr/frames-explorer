@@ -9,4 +9,6 @@ Morning prep checklist:
 - [ ] Check CI/CD status
 - [ ] Review PRs awaiting action
 - [ ] Clear notification backlog
+- [ ] Run test suite: `make test`
+- [ ] Check Python file compilation: `python -m py_compile *.py`
 <!-- Mise en Place - Daily Setup:1 ends here -->

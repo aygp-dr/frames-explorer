@@ -31,6 +31,8 @@ emacs --batch -l org --eval "(org-babel-tangle-file \"kitchen-ops.org\")"
      - [ ] Check CI/CD status
      - [ ] Review PRs awaiting action
      - [ ] Clear notification backlog
+     - [ ] Run test suite: `make test`
+     - [ ] Check Python file compilation: `python -m py_compile *.py`
    #+end_src
 
 ** Deglaze - Integrate Upstream
