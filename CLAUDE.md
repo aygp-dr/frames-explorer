@@ -4,14 +4,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-This is a Python implementation of frame-based knowledge representation systems inspired by Marvin Minsky's Society of Mind and MIT's FRL (Frame Representation Language). All source code is maintained in `SETUP.org` using literate programming and tangled to generate Python files.
+This is a Python implementation of frame-based knowledge representation systems inspired by Marvin Minsky's Society of Mind and MIT's FRL (Frame Representation Language).
 
 ## Development Commands
 
 ### Essential Commands
 - **Run tests**: `python3 test_frames.py` or `make test`
 - **Run examples interactively**: `python3 -i examples.py` or `make examples`
-- **Tangle code from org**: `make tangle` (regenerates .py files from SETUP.org)
+- **Tangle kitchen commands**: `make tangle` (regenerates Claude commands from kitchen-ops.org)
 - **Cross-platform test**: `./test-all.sh` or `make test-all-platforms`
 
 ### Python Commands with UV

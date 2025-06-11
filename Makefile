@@ -13,7 +13,7 @@ init:
 
 # Tangle from org file (requires Emacs)
 tangle:
-	emacs --batch -l org --eval "(org-babel-tangle-file \"SETUP.org\")"
+	emacs --batch -l org --eval "(org-babel-tangle-file \"kitchen-ops.org\")"
 
 # Run tests
 test:
