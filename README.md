@@ -1,6 +1,6 @@
 # Frame-Based Knowledge Representation Workshop
 
-<img src="static/images/minsky_thumbnail.jpg" alt="Marvin Minsky - Society of Mind" align="right" width="300"/>
+![Marvin Minsky - Society of Mind](static/images/minsky_thumbnail.jpg)
 
 A modern Python implementation of frame-based knowledge representation inspired by MIT's FRL (Frame Representation Language) from the 1970s.
 
