@@ -77,7 +77,7 @@ Tested on:
 
 ## License
 
-MIT License - Use freely!
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Reading List
 
