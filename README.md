@@ -6,16 +6,12 @@ A modern Python implementation of frame-based knowledge representation inspired 
 
 ## Features
 
-<img src="static/images/54581837550_enhanced.jpg" alt="Frame Explorer UI" align="left" width="300"/>
-
 - **Frames**: Knowledge structures with slots and facets
 - **Computed Values**: Lazy evaluation with `if_needed`
 - **Active Values (Demons)**: Triggers on value changes
 - **Prototype Inheritance**: Share knowledge between frames
 - **Persistence**: Save/load frames as JSON
 - **Cross-Platform**: Works on Linux, FreeBSD, macOS, and in containers
-
-<br clear="all"/>
 
 ## Quick Start
 
