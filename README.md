@@ -1,8 +1,12 @@
 # Frame-Based Knowledge Representation Workshop
 
+<img src="static/images/minsky_thumbnail.jpg" alt="Marvin Minsky - Society of Mind" align="right" width="300"/>
+
 A modern Python implementation of frame-based knowledge representation inspired by MIT's FRL (Frame Representation Language) from the 1970s.
 
 ## Features
+
+<img src="static/images/54581837550_enhanced.jpg" alt="Frame Explorer UI" align="left" width="300"/>
 
 - **Frames**: Knowledge structures with slots and facets
 - **Computed Values**: Lazy evaluation with `if_needed`
@@ -10,6 +14,8 @@ A modern Python implementation of frame-based knowledge representation inspired 
 - **Prototype Inheritance**: Share knowledge between frames
 - **Persistence**: Save/load frames as JSON
 - **Cross-Platform**: Works on Linux, FreeBSD, macOS, and in containers
+
+<br clear="all"/>
 
 ## Quick Start
 
@@ -76,6 +82,15 @@ Tested on:
 ## License
 
 MIT License - Use freely!
+
+## Reading List
+
+This implementation is based on foundational work in frame-based knowledge representation:
+
+- Marvin Minsky (1974): [A Framework for Representing Knowledge](https://dspace.mit.edu/handle/1721.1/6089). AIM-306, Cambridge, US: MIT.
+- R. Bruce Roberts and Ira P. Goldstein (1977): [FRL Primer](https://dspace.mit.edu/handle/1721.1/5767). AIM-408, Cambridge, US: MIT.
+- R. Bruce Roberts and Ira P. Goldstein (1977): [FRL Manual](https://dspace.mit.edu/handle/1721.1/5768). AIM-409, Cambridge, US: MIT.
+- Marvin Minsky (1986): [The Society of Mind](https://en.wikipedia.org/wiki/Society_of_Mind). Simon & Schuster.
 
 ## Credits
 
